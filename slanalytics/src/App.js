@@ -5,7 +5,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Bothchart from "./Charts/BothChart";
 import LineChart from "./Charts/Line-Chart";
 
-
 function App() {
   return (
     <BrowserRouter>

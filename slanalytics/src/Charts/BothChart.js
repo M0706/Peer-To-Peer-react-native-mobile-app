@@ -9,7 +9,7 @@ export default function Bothchart(){
     const [QuesNo,studentTime, timeColor, topperTime] = [[],[],[],[]]
     const questionLevel = (Ques) =>{
        if(Ques.Quetype==="Easy"){ return "green"}
-       if(Ques.Quetype==="Medium"){ return "orange"}
+       if(Ques.Quetype==="Medium"){ return "yellow"}
        if(Ques.Quetype==="Hard"){ return "red"}
     }
     
