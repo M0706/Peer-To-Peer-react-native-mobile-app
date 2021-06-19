@@ -1,0 +1,5 @@
+[
+    {"subject": "Physics", "MarksScored":"21", "TotalMarks": "30"},
+    {"subject": "Chemistry", "MarksScored":"21", "TotalMarks": "30"},
+    {"subject": "Maths", "MarksScored":"21", "TotalMarks": "30"} 
+]

@@ -63,7 +63,7 @@ export default function PieChartb(props) {
       position: "right",
       legendCallback: function (chart) {
         console.log(chart);
-        return ;
+        return [];
       }
     },
     elements: {
