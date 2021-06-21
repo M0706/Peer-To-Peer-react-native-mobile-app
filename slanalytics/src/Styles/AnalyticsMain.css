@@ -1,75 +1,167 @@
-.QuestionWise{
-    font-size: 13px;
-    margin-bottom: 0px;
-    font-style: italic;
+.QuestionWise {
+  font-size: 13px;
+  margin-bottom: 0px;
+  font-style: italic;
 }
 
-.QuestionWiseBackGround{
-
-position: relative;
-color: white;
-font-size: 19px;
-font-weight: 300;
-text-align: center;
-padding: 70px 5px 0px;
-float: left;
-margin-left: 3.5%;
-width: 10%;
-height: 154px;
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
-box-shadow: #d6d6d6 1px 1px 3px 3px;
-background-color: #5eb252;
-border: none;
-background-size: 100px;
-background-position: 50% 10%;
-background-repeat: no-repeat;
-cursor: pointer;
-margin-right: 5px;
-background-image: url(https://dosaq5cx1jl9y.cloudfront.net/images/graphicon.gif);
-
+.QuestionWiseBackGround {
+  position: relative;
+  color: white;
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+  padding: 70px 5px 0px;
+  float: left;
+  margin-left: 3.5%;
+  width: 10%;
+  height: 154px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: #d6d6d6 1px 1px 3px 3px;
+  background-color: #5eb252;
+  border: none;
+  background-size: 100px;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-right: 5px;
+  background-image: url(https://dosaq5cx1jl9y.cloudfront.net/images/graphicon.gif);
 }
 
 .Testtotal {
-    
-
-position: relative;
-color: white;
-font-size: 19px;
-font-weight: 300;
-text-align: center;
-padding: 70px 5px 0px;
-float: left;
-margin-left: 3.5%;
-width: 10%;
-height: 154px;
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
-box-shadow: #d6d6d6 1px 1px 3px 3px;
-background-color: #5eb252;
-border: none;
-background-size: 100px;
-background-position: 50% 10%;
-background-repeat: no-repeat;
-cursor: pointer;
-margin-right: 5px;
-/* background-image: url(https://dosaq5cx1jl9y.cloudfront.net/images/graphicon.gif); */
-
+  position: relative;
+  color: white;
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+  padding: 70px 5px 0px;
+  float: left;
+  margin-left: 3.5%;
+  width: 10%;
+  height: 154px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: #d6d6d6 1px 1px 3px 3px;
+  background-color: #5eb252;
+  border: none;
+  background-size: 100px;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-right: 5px;
+  /* background-image: url(https://dosaq5cx1jl9y.cloudfront.net/images/graphicon.gif); */
 }
 
 .Score {
-    margin-top: 1px;
-    margin-left: 20px;
-    font-size: 24px;
-    line-height: 24px;
+  margin-top: 1px;
+  margin-left: 20px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.MarksScored {
+  margin-left: 20px;
+  margin-top: 5px;
+  color: white;
+  font-size: 35px;
+  line-height: 49px;
+  text-align: center;
+}
+
+
+
+
+/* faltu */
+
+
+.DetailHeadBackground {
+  position: relative;
+  color: rgb(12, 0, 0);
+  font-size: 19px;
+  font-weight: 300;
+  /* text-align: center; */
+  padding: 70px 5px 0px;
+  float: left;
+  margin-left: 3.5%;
+  width: 90%;
+  height: 130px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: #d6d6d6 1px 1px 3px 3px;
+  background-color: #e9f0e8;
+  /* border: none;
+  background-size: 100px;
+  background-position: 50% 10%;
+  background-repeat: no-repeat;
+  cursor: pointer; */
+  margin-right: 5px;
+}
+
+.One{
+  color: rgb(12, 0, 0);
+  margin-left: 5%;;
+}
+.NumQuestion {
+    /* margin-left: 2%; */
+
+    /* padding: 10px 5px 0px; */
+    font-size: 50px;
+    font-weight: 300;
+}
+.two{
+    color: rgb(12, 0, 0);
+    margin-left: 10%;;
+}
+
+.ValueNum{
+  font-size: 50px;
     font-weight: 300;
 }
 
-.MarksScored{
-    margin-left: 20px;
-    margin-top: 5px;
-    color: white;
-    font-size: 49px;
-    line-height: 49px;
-    text-align: left;
+
+
+/*  DetailHeaderAnalysis */
+
+.Features{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: #d6d6d6;
+  box-sizing:100px; */
 }
+
+.BoxType{
+  text-align: center;
+  align-items: center;
+  flex: 1;
+  margin:10px 0px;
+  padding: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 11px -1px rgba(234,215,215,1);
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(234,215,215,1);
+  -moz-box-shadow: 0px 0px 11px -1px rgba(234,215,215,1);
+}
+
+.IconType {
+  align-items:center;
+  /* margin-left: 25px; */
+}
+
+.TotalValue {
+  font-size: 40px;
+  align-items: center;
+  /* margin-left: 15%; */
+  text-align: center;
+}
+.Types{
+  text-align: center;
+  align-items: center;
+}
+
+.TypeContainer{
+  margin:15px 0px;
+  text-align: center;
+  align-items: center;
+} 

@@ -6,13 +6,15 @@ import data from "../Data/individualQuestionData.json"
 import SubHeaderQuesWise from '../components/SubHeader/SubHeaderQuesWise';
 import SubHeaderSubjectWise from '../components/SubHeader/SubHeaderSubjectWise';
 import SubHeaderTotalScore from '../components/SubHeader/SubHeaderTotalScore';
+import DetailHeaderAnalysis from '../components/DetailHeader/DetailHeaderAnalysis';
+import Bottom from '../components/Bottom/Bottom';
 
 const AnalyticsMain = () =>{
     
 
 
     const getTotalMarks = () =>{
-        let [MarksScoredTotal,TotalMarks] = [0,0];
+        let [MarksScoredTotal,TotalMarks,TotalQuestion] = [0,0,0];
         data.map((Question)=>{
             MarksScoredTotal=MarksScoredTotal+parseInt(Question.MarksScored);
             TotalMarks = TotalMarks + parseInt(Question.TotalMarks)
@@ -38,8 +40,9 @@ const AnalyticsMain = () =>{
                         </div>)
             })
             }
-
-
+            <DetailHeaderAnalysis/>
+            {/* <Bottom/> */}
+            {/* <CenteredGrid/> */}
         </div>
     )
 }
