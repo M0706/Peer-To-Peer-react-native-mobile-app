@@ -1,0 +1,5 @@
+[
+    {"subject": "Physics", "Answered":"20" ,"MarksScored":"25", "TotalMarks": "30","TotalQuestion":"30", "TotalCorrect":"23" ,"TotalIncorrect":"5","NotAnswered":"10", "notVisited":"7", "negative": "5","PhysicsTime":"20" ,"SwitchOver":"2"},
+    {"subject": "Chemistry", "Answered":"23" ,"MarksScored":"17", "TotalMarks": "30","TotalQuestion":"30" , "TotalCorrect":"19","TotalIncorrect":"8","NotAnswered":"7", "notVisited":"5", "negative": "9" ,"ChemistryTime":"25", "SwitchOver":"1"},
+    {"subject": "Maths", "Answered":"18" ,"MarksScored":"15", "TotalMarks": "30","TotalQuestion":"30",  "TotalCorrect":"15","TotalIncorrect":"15","NotAnswered":"12", "notVisited":"10", "negative": "10","MathsTime":"15","SwitchOver":"0"} 
+]

@@ -1,0 +1,44 @@
+/*  DetailHeaderAnalysis */
+
+.Features{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #d6d6d6;
+    box-sizing:100px; */
+  }
+  
+  .BoxType{
+    text-align: center;
+    align-items: center;
+    flex: 1;
+    margin:10px 0px;
+    padding: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 11px -1px rgba(234,215,215,1);
+    -webkit-box-shadow: 0px 0px 11px -1px rgba(234,215,215,1);
+    -moz-box-shadow: 0px 0px 11px -1px rgba(234,215,215,1);
+  }
+  
+  .IconType {
+    align-items:center;
+    /* margin-left: 25px; */
+  }
+  
+  .TotalValue {
+    font-size: 40px;
+    align-items: center;
+    /* margin-left: 15%; */
+    text-align: center;
+  }
+  .Types{
+    text-align: center;
+    align-items: center;
+  }
+  
+  .TypeContainer{
+    margin:15px 0px;
+    text-align: center;
+    align-items: center;
+  } 

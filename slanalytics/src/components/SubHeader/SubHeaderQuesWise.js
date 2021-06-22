@@ -19,4 +19,3 @@ const SubHeaderQuesWise = (props) =>{
 }
 
 export default SubHeaderQuesWise;
-

@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/Header'
 import '../Styles/AnalyticsMain.css';
-import {Link} from "react-router-dom";
-import data from "../Data/individualQuestionData.json"
+import QuestionWiseData from "../Data/individualSubjectData.json"
 import SubHeaderQuesWise from '../components/SubHeader/SubHeaderQuesWise';
 import SubHeaderSubjectWise from '../components/SubHeader/SubHeaderSubjectWise';
 import SubHeaderTotalScore from '../components/SubHeader/SubHeaderTotalScore';
@@ -10,21 +9,25 @@ import DetailHeaderAnalysis from '../components/DetailHeader/DetailHeaderAnalysi
 import Bottom from '../components/Bottom/Bottom';
 
 const AnalyticsMain = () =>{
-    
+    const [subject,setSubject] = useState("TotalScore");
 
 
     const getTotalMarks = () =>{
-        let [MarksScoredTotal,TotalMarks,TotalQuestion] = [0,0,0];
-        data.map((Question)=>{
+        let [MarksScoredTotal,TotalMarks] = [0,0];
+        QuestionWiseData.map((Question)=>{
             MarksScoredTotal=MarksScoredTotal+parseInt(Question.MarksScored);
             TotalMarks = TotalMarks + parseInt(Question.TotalMarks)
         })
 
         return(
+            <div onClick={()=>setSubject("TotalScore")}>
             <SubHeaderTotalScore MarksScoredTotal={MarksScoredTotal} TotalMarks={TotalMarks} />
+            </div>
         )
 
     }
+
+    //const SubjectData = 
         
     
     return(
@@ -32,17 +35,18 @@ const AnalyticsMain = () =>{
             <Header />
             <SubHeaderQuesWise/>
             {getTotalMarks()}         
-            {data.map((Question)=>{
+            {QuestionWiseData.map((Question)=>{
                     //console.log(Question)
                     return(
-                        <div>
+                        <div onClick = {()=>setSubject(Question.subject)}>
                         <SubHeaderSubjectWise MarksScored={Question.MarksScored} TotalMarks={Question.TotalMarks} Subject={Question.subject} />
                         </div>)
             })
             }
-            <DetailHeaderAnalysis/>
-            {/* <Bottom/> */}
-            {/* <CenteredGrid/> */}
+
+            <DetailHeaderAnalysis subject = {subject}/>
+            <Bottom/>
+
         </div>
     )
 }

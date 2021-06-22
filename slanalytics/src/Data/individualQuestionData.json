@@ -1,5 +1,0 @@
-[
-    {"subject": "Physics", "MarksScored":"21", "TotalMarks": "30","TotalQuestion":"30", "TotalCorrect":"21" ,"TotalIncorrect":"5","NotAnswered":"4"},
-    {"subject": "Chemistry", "MarksScored":"21", "TotalMarks": "30","TotalQuestion":"30" , "TotalCorrect":"21","TotalIncorrect":"5","NotAnswered":"4"},
-    {"subject": "Maths", "MarksScored":"21", "TotalMarks": "30","TotalQuestion":"30",  "TotalCorrect":"21","TotalIncorrect":"5","NotAnswered":"4"} 
-]

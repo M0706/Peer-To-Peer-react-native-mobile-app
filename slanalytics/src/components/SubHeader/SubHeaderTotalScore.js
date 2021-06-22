@@ -8,7 +8,7 @@ const SubHeaderTotalScore = (props) =>{
 
     return(
         <div>
-        <Link to="/BothCharts"> 
+        <Link to="/"> 
             <div className="Testtotal">
                 <div className="Score">Total Score</div>
                 <div className="MarksScored"> 
@@ -23,4 +23,3 @@ const SubHeaderTotalScore = (props) =>{
 }
 
 export default SubHeaderTotalScore;
-

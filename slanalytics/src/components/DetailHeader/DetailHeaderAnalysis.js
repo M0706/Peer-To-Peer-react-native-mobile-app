@@ -1,25 +1,54 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import "../../Styles/AnalyticsMain.css"
-// import Paper from '@material-ui/core/Paper';
-// import Grid from '@material-ui/core/Grid';
-// import incorrectIcon from '../Assets/img/incorrectIcon.jpg';
-// import Image from 'react-bootstrap/Image';
-
+import "../../Styles/DetailsHeader.css"
 import {CheckCircleOutline,ThumbDown,KeyboardArrowDown,Check, Cancel,Speed, Help}  from "@material-ui/icons";
-// const useStyles = makeStyles((theme) => ({
-//   root: {
-//     flexGrow: 1,
-//   },
-//   paper: {
-//     padding: theme.spacing(2),
-//     textAlign: 'center',
-//     color: theme.palette.text.secondary,
-//   },
-// }));
+import IndividualSubjectData from '../../Data/individualSubjectData.json'
+import AnswerData from '../../Data/AnswersData.json'
 
-export default function DetailHeaderAnalysis() {
-  // const classes = useStyles();
+
+
+export default function DetailHeaderAnalysis(props) {
+    let [Questions, Answered, Correct, Incorrect, notVisited, negative] = [0,0,0,0,0];
+
+    const renderCorrectData = (subject) =>{
+        if(subject==="TotalScore"){
+            Questions= AnswerData.length;
+            negative = AnswerData[0].TotalNegative;
+            AnswerData.map((Question)=>{
+                if(Question.Correct==="not attempted")
+                {
+                    Answered=Answered + 1;
+                    if(Question.notVisited){
+                        notVisited=notVisited+1}
+                }
+                else if(Question.Correct!=="not attempted"){
+                    Answered=Answered+1;
+                    if(Question.Correct===true){
+                        Correct=Correct+1
+                    }
+                    else{
+                        Incorrect=Incorrect+1;
+                    }
+                }
+               
+            })
+        }
+        else{
+            IndividualSubjectData.map((sub)=>{
+                if(sub.subject===subject){
+                    //console.log(sub);
+                    Questions = sub.TotalQuestion;
+                    Answered  = sub.Answered;
+                    Correct = sub.TotalCorrect;
+                    Incorrect = sub.TotalIncorrect
+                    notVisited = sub.notVisited;
+                    negative =  sub.negative;
+                }
+            })
+        }
+
+    }
+
+    renderCorrectData(props.subject);
 
   return (
 
@@ -27,7 +56,7 @@ export default function DetailHeaderAnalysis() {
       <div className="BoxType">
       <span className="IconType"><Help/></span>
       <div className="Types">
-        <span className="TotalValue">60</span>
+        <span className="TotalValue">{Questions}</span>
         <div className="TypeContainer">
           <span className="TitleName">Questions</span>
         </div>
@@ -36,16 +65,16 @@ export default function DetailHeaderAnalysis() {
       <div className="BoxType">
       <span className="IconType"><Check/></span>
       <div className="Types">
-        <span className="TotalValue">60</span>
+        <span className="TotalValue">{Answered}</span>
         <div className="TypeContainer">
-          <span className="TitleName">Questions</span>
+          <span className="TitleName">Answered</span>
         </div>
         </div>
       </div>
       <div className="BoxType">
       <span className="IconType"><CheckCircleOutline/></span>
       <div className="Types">
-        <span className="TotalValue">60</span>
+        <span className="TotalValue">{Correct}</span>
         <div className="TypeContainer">
           <span className="TitleName">Correct</span>
         </div>
@@ -54,25 +83,17 @@ export default function DetailHeaderAnalysis() {
       <div className="BoxType">
       <span className="IconType"><Cancel/></span>
       <div className="Types">
-        <span className="TotalValue">60</span>
+        <span className="TotalValue">{Incorrect}</span>
         <div className="TypeContainer">
           <span className="TitleName">Incorrect</span>
         </div>
         </div>
       </div>
-      <div className="BoxType">
-      <span className="IconType"><Speed/></span>
-      <div className="Types">
-        <span className="TotalValue">60</span>
-        <div className="TypeContainer">
-          <span className="TitleName">Correct with in Time</span>
-        </div>
-        </div>
-      </div>
+   
       <div className="BoxType">
       <span className="IconType"><ThumbDown/></span>
       <div className="Types">
-        <span className="TotalValue">10</span>
+        <span className="TotalValue">{notVisited}</span>
         <div className="TypeContainer">
           <span className="TitleName">Not visited</span>
         </div>
@@ -81,7 +102,7 @@ export default function DetailHeaderAnalysis() {
       <div className="BoxType">
       <span className="IconType"><KeyboardArrowDown/></span>
       <div className="Types">
-        <span className="TotalValue">5</span>
+        <span className="TotalValue">{negative}</span>
         <div className="TypeContainer">
           <span className="TitleName">Negative Marks</span>
         </div>
